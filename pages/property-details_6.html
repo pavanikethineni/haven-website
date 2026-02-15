@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>890 Beacon Hill | Haven</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../css/property-details.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="../index.html">
+      <img src="../images/haven-logo.png" height="36" alt="Haven Logo">
+      <strong class="ml-2">Haven</strong>
+    </a>
+  </div>
+</nav>
+
+<div class="container mt-4">
+
+<a href="listings.html" class="back-link">← Back to listings</a>
+
+<div class="image-grid mt-3">
+
+  <div class="main-image" onclick="openGallery(0)">
+    <img src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&w=800&q=80" alt="Main Property Image">
+    <div class="view-overlay">
+      <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+      View all photos
+    </div>
+  </div>
+
+  <div class="side-images col-lg-10">
+    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=80" onclick="openGallery(1)" alt="Interior 1">
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80" onclick="openGallery(2)" alt="Interior 2">
+    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1600&h=900&q=80" onclick="openGallery(3)" alt="Interior 3">
+  </div>
+
+</div>
+
+<div class="row mt-4">
+
+<div class="col-lg-8">
+
+<div class="pd-card">
+  <div class="pd-price-row">
+    <h2>$4,500,000</h2>
+    <div class="pd-icons">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-share-nodes"></i>
+    </div>
+  </div>
+
+  <p class="pd-address">890 Beacon Hill</p>
+  <p class="pd-location">
+    <i class="fa-solid fa-location-dot"></i> Boston, MA 02108
+  </p>
+
+  <div class="pd-meta">
+    <span><i class="fa-solid fa-bed"></i> 6 beds</span>
+    <span><i class="fa-solid fa-bath"></i> 5 baths</span>
+    <span><i class="fa-solid fa-ruler-combined"></i> 5,200 sqft</span>
+  </div>
+</div>
+
+<div class="pd-card">
+  <h4>Property Details</h4>
+
+  <div class="pd-details-grid">
+    <div><i class="fa-solid fa-bed"></i> Bedrooms <strong>6</strong></div>
+    <div><i class="fa-solid fa-bath"></i> Bathrooms <strong>5</strong></div>
+    <div><i class="fa-solid fa-ruler-combined"></i> Sq Ft <strong>5,200</strong></div>
+    <div><i class="fa-solid fa-calendar"></i> Year Built <strong>2021</strong></div>
+    <div><i class="fa-solid fa-car"></i> Parking <strong>3 Car Garage</strong></div>
+    <div><i class="fa-solid fa-building"></i> Type <strong>Luxury Modern Villa</strong></div>
+  </div>
+
+  <div class="pd-hoa">
+    <span>HOA Fees</span>
+    <strong>$2,250 / month</strong>
+  </div>
+</div>
+
+<div class="pd-card">
+  <h4>About This Home</h4>
+  <p>
+    This ultra-modern Beacon Hill masterpiece blends bold black architecture
+    with warm natural wood accents and ambient lighting.
+    Featuring expansive floor-to-ceiling windows, a chef’s kitchen with premium
+    appliances, private landscaped garden, and seamless indoor-outdoor living.
+    Designed for luxury entertaining and sophisticated city living.
+  </p>
+</div>
+
+<div class="pd-card">
+  <h4>Features & Amenities</h4>
+  <div class="features-grid">
+    <div><i class="fa-solid fa-check"></i> Floor-to-ceiling Windows</div>
+    <div><i class="fa-solid fa-check"></i> Smart Home Automation</div>
+    <div><i class="fa-solid fa-check"></i> Heated Marble Floors</div>
+    <div><i class="fa-solid fa-check"></i> Private Landscaped Garden</div>
+    <div><i class="fa-solid fa-check"></i> 3-Car Garage</div>
+    <div><i class="fa-solid fa-check"></i> Home Theater Room</div>
+    <div><i class="fa-solid fa-check"></i> Wine Cellar</div>
+    <div><i class="fa-solid fa-check"></i> Security System</div>
+  </div>
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="pd-agent-card">
+  <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Agent Photo">
+  <h5>Michael Harrington</h5>
+  <p class="agent-role">Haven Elite Boston</p>
+
+  <button class="agent-btn">
+    <i class="fa-solid fa-phone"></i> Call
+  </button>
+
+  <button class="agent-btn outline">
+    <i class="fa-solid fa-envelope"></i> Email
+  </button>
+
+  <hr>
+
+  <input type="text" id="name" placeholder="Your Name">
+  <input type="email" id="email" placeholder="Email Address">
+  <input type="text" id="phone" placeholder="Phone Number">
+
+  <button type="button" class="btn-green" onclick="submitRequest()">
+    Request a Tour
+  </button>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div id="galleryModal" class="gallery-modal">
+  <span class="close" onclick="closeGallery()">×</span>
+  <span class="arrow left" onclick="prevImage()">‹</span>
+  <img id="galleryImage" alt="Gallery Image">
+  <span class="arrow right" onclick="nextImage()">›</span>
+
+  <div class="dots">
+    <span onclick="setImage(0)"></span>
+    <span onclick="setImage(1)"></span>
+    <span onclick="setImage(2)"></span>
+    <span onclick="setImage(3)"></span>
+  </div>
+</div>
+
+<div class="request-modal" id="requestModal">
+  <div class="request-card">
+    <div class="check-icon">✔</div>
+    <h3>Request Sent!</h3>
+    <p>The agent will contact you shortly.</p>
+  </div>
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

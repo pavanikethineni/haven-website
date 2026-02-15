@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven Real Estate</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white main-navbar">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/haven-logo.png" alt="Haven Logo" height="40">
+            <span class="brand-text ml-2">Haven</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#havenNavbar"
+                aria-controls="havenNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="havenNavbar">
+            <ul class="navbar-nav ml-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="location.href='pages/listings.html'">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="location.href='pages/listings.html'">Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="location.href='pages/listings.html'">Sell</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="location.href='pages/agent.html'">Agent</a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a href="pages/dashboard.html" class="user-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center ml-lg-3 mt-3 mt-lg-0">
+                <a href="#" class="btn btn-outline-secondary mr-2">Sign In</a>
+                <a href="#" class="btn btn-success text-white">List Property</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section">
+    <div class="hero-overlay">
+        <h1 class="hero-title">Find Your Dream Home</h1>
+        <p class="hero-subtitle">
+            Discover exceptional properties in the most desirable neighborhoods.
+            Your perfect home awaits.
+        </p>
+
+        <div class="search-wrapper">
+            <div class="search-box">
+
+                <ul class="search-tabs">
+                    <li class="tab active" data-type="buy">Buy</li>
+                    <li class="tab" data-type="rent">Rent</li>
+                    <li class="tab" data-type="sold">Sold</li>
+                    <div class="tab-indicator"></div>
+                </ul>
+
+                <div class="search-fields">
+                    <input type="text" placeholder="City, neighborhood, or ZIP">
+
+                    <select>
+                        <option>Price Range</option>
+                    </select>
+
+                    <select>
+                        <option>Property Type</option>
+                    </select>
+
+                    <button class="search-btn text-center"
+                            onclick="window.location.href='pages/listings.html'">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <h2>15K+</h2>
+                    <p>Active Listings</p>
+                </div>
+
+                <div class="stat">
+                    <h2>50K+</h2>
+                    <p>Happy Clients</p>
+                </div>
+
+                <div class="stat">
+                    <h2>200+</h2>
+                    <p>Expert Agents</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cities-section">
+    <div class="container">
+        <h2 class="section-title">Explore Top Cities</h2>
+        <p class="section-subtitle">
+            Discover properties in America's most sought-after locations
+        </p>
+
+        <div class="cities-row mt-5">
+
+            <a href="pages/listings.html" class="city-card">
+                <img src="https://images.unsplash.com/photo-1522083165195-3424ed129620" alt="New York">
+                <div class="city-overlay">
+                    <h5>New York</h5>
+                    <p>2,543 properties</p>
+                </div>
+            </a>
+
+            <a href="pages/listings.html" class="city-card">
+                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156" alt="Los Angeles">
+                <div class="city-overlay">
+                    <h5>Los Angeles</h5>
+                    <p>1,876 properties</p>
+                </div>
+            </a>
+
+            <a href="pages/listings.html" class="city-card">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000" alt="Miami">
+                <div class="city-overlay">
+                    <h5>Miami</h5>
+                    <p>1,234 properties</p>
+                </div>
+            </a>
+
+            <a href="pages/listings.html" class="city-card">
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29" alt="San Francisco">
+                <div class="city-overlay">
+                    <h5>San Francisco</h5>
+                    <p>987 properties</p>
+                </div>
+            </a>
+
+            <a href="pages/listings.html" class="city-card">
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b" alt="Chicago">
+                <div class="city-overlay">
+                    <h5>Chicago</h5>
+                    <p>1,456 properties</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+<section class="just-listed-section">
+    <div class="container">
+
+        <div class="just-listed-header">
+            <div>
+                <h2 class="section-title">Just Listed</h2>
+                <p class="section-subtitle">
+                    Be the first to see the newest homes on the market
+                </p>
+            </div>
+
+            <div class="header-actions">
+                <button class="nav-arrow" onclick="moveLeft()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button class="nav-arrow" onclick="moveRight()">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <a href="#" class="view-all">View All →</a>
+            </div>
+        </div>
+
+        <div class="listed-row" id="justListedRow">
+
+            <div class="listing-card">
+                <a href="pages/property-details.html" class="card-link">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
+                        <i class="fa-regular fa-heart like-btn"></i>
+                    </div>
+                    <div class="listing-content">
+                        <h4>$2,450,000</h4>
+                        <p class="address">1234 Park Avenue</p>
+                        <p class="location">New York, NY 10028</p>
+                        <div class="features">
+                            <span><i class="fa-solid fa-bed"></i> 4 bd</span>
+                            <span><i class="fa-solid fa-bath"></i> 3.5 ba</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 3,200 sqft</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="listing-card">
+                <a href="pages/property-details_2.html" class="card-link">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12?auto=format&fit=crop&w=800&q=80">
+                        <i class="fa-regular fa-heart like-btn"></i>
+                    </div>
+                    <div class="listing-content">
+                        <h4>$1,875,000</h4>
+                        <p class="address">456 Wilshire Blvd</p>
+                        <p class="location">Los Angeles, CA 90024</p>
+                        <div class="features">
+                            <span><i class="fa-solid fa-bed"></i> 3 bd</span>
+                            <span><i class="fa-solid fa-bath"></i> 2.5 ba</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="listing-card">
+                <a href="pages/property-details_3.html" class="card-link">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80">
+                        <i class="fa-regular fa-heart like-btn"></i>
+                    </div>
+                    <div class="listing-content">
+                        <h4>$3,200,000</h4>
+                        <p class="address">789 Ocean Drive</p>
+                        <p class="location">Miami, FL 33139</p>
+                        <div class="features">
+                            <span><i class="fa-solid fa-bed"></i> 5 bd</span>
+                            <span><i class="fa-solid fa-bath"></i> 4 ba</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 4,100 sqft</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="listing-card">
+                <a href="pages/property-details_4.html" class="card-link">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80">
+                        <i class="fa-regular fa-heart like-btn"></i>
+                    </div>
+                    <div class="listing-content">
+                        <h4>$8,500 / mo</h4>
+                        <p class="address">321 Market Street</p>
+                        <p class="location">San Francisco, CA 94105</p>
+                        <div class="features">
+                            <span><i class="fa-solid fa-bed"></i> 2 bd</span>
+                            <span><i class="fa-solid fa-bath"></i> 2 ba</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 1,450 sqft</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="listing-card">
+                <a href="pages/property-details_5.html" class="card-link">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=800&q=80">
+                        <i class="fa-regular fa-heart like-btn"></i>
+                    </div>
+                    <div class="listing-content">
+                        <h4>$2,950,000</h4>
+                        <p class="address">902 Sunset Blvd</p>
+                        <p class="location">Los Angeles, CA 90069</p>
+                        <div class="features">
+                            <span><i class="fa-solid fa-bed"></i> 4 bd</span>
+                            <span><i class="fa-solid fa-bath"></i> 4 ba</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 3,500 sqft</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="why-haven-section">
+    <div class="container text-center">
+        <h2 class="section-title">Why Choose Haven</h2>
+        <p class="section-subtitle">
+            We're committed to making your real estate journey seamless and successful
+        </p>
+
+        <div class="row mt-5">
+
+            <div class="col-md-3 mb-4">
+                <div class="why-card text-center">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h5>Trusted & Verified</h5>
+                    <p>
+                        All listings are verified by our team to ensure accuracy and legitimacy.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="why-card text-center">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h5>Expert Agents</h5>
+                    <p>
+                        Work with top-rated agents who know the local market inside and out.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="why-card text-center">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h5>Market Insights</h5>
+                    <p>
+                        Access real-time data and trends to make informed decisions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="why-card text-center">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h5>24/7 Support</h5>
+                    <p>
+                        Our dedicated team is here to help you every step of the way.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-container">
+        <h2>Ready to Find Your Perfect Home?</h2>
+        <p>
+            Join thousands of satisfied clients who found their dream property with Haven.<br>
+            Our expert agents are ready to help you every step of the way.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="pages/listings.html" class="btn btn-outline-light btn-lg">
+                Browse Properties →
+            </a>
+            <a href="pages/list-property.html" class="btn btn-light btn-lg">
+                List Your Home
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 footer-brand">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="images/haven-logo.png" height="40" alt="Haven Logo">
+                    <h4 class="ml-2 text-white">Haven</h4>
+                </div>
+
+                <p>
+                    Your trusted partner in finding the perfect home.
+                    We connect buyers, sellers, and renters with exceptional properties.
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone mr-2"></i>
+                    <a href="tel:+180042836" class="footer-link">1-800-HAVEN</a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope mr-2"></i>
+                    <a href="mailto:hello@haven.com" class="footer-link">hello@haven.com</a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot mr-2"></i>
+                    New York, NY
+                </p>
+            </div>
+
+            <div class="col-md-2 footer-links">
+                <h5>Resources</h5>
+                <a href="#">Real Estate News</a>
+                <a href="#">Market Trends</a>
+                <a href="#">Buying Guide</a>
+                <a href="#">Selling Guide</a>
+            </div>
+
+            <div class="col-md-2 footer-links">
+                <h5>Company</h5>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="col-md-2 footer-links">
+                <h5>Legal</h5>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Fair Housing</a>
+                <a href="#">Accessibility</a>
+            </div>
+
+        </div>
+
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+            <p>© 2024 Haven Real Estate. All rights reserved.</p>
+            <p>Equal Housing Opportunity</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>321 Market Street | Haven</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../css/property-details.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="../index.html">
+      <img src="../images/haven-logo.png" height="36" alt="Haven Logo">
+      <strong class="ml-2">Haven</strong>
+    </a>
+  </div>
+</nav>
+
+<div class="container mt-4">
+
+<a href="listings.html" class="back-link">← Back to listings</a>
+
+<div class="image-grid mt-3">
+
+  <div class="main-image" onclick="openGallery(0)">
+    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Main Property Image">
+    <div class="view-overlay">
+      <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+      View all photos
+    </div>
+  </div>
+
+  <div class="side-images col-lg-10">
+    <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1600&q=80" onclick="openGallery(1)" alt="Interior 1">
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80" onclick="openGallery(2)" alt="Interior 2">
+    <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=1600&q=80" onclick="openGallery(3)" alt="Interior 3">
+  </div>
+
+</div>
+
+<div class="row mt-4">
+
+<div class="col-lg-8">
+
+<div class="pd-card">
+  <div class="pd-price-row">
+    <h2>$8,500 / mo</h2>
+    <div class="pd-icons">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-share-nodes"></i>
+    </div>
+  </div>
+
+  <p class="pd-address">321 Market Street</p>
+  <p class="pd-location">
+    <i class="fa-solid fa-location-dot"></i> San Francisco, CA 94105
+  </p>
+
+  <div class="pd-meta">
+    <span><i class="fa-solid fa-bed"></i> 2 beds</span>
+    <span><i class="fa-solid fa-bath"></i> 2 baths</span>
+    <span><i class="fa-solid fa-ruler-combined"></i> 1,450 sqft</span>
+  </div>
+</div>
+
+<div class="pd-card">
+  <h4>Property Details</h4>
+
+  <div class="pd-details-grid">
+    <div><i class="fa-solid fa-bed"></i> Bedrooms <strong>2</strong></div>
+    <div><i class="fa-solid fa-bath"></i> Bathrooms <strong>2</strong></div>
+    <div><i class="fa-solid fa-ruler-combined"></i> Sq Ft <strong>1,450</strong></div>
+    <div><i class="fa-solid fa-calendar"></i> Year Built <strong>2020</strong></div>
+    <div><i class="fa-solid fa-car"></i> Parking <strong>1 Garage Space</strong></div>
+    <div><i class="fa-solid fa-building"></i> Type <strong>Luxury Rental</strong></div>
+  </div>
+
+  <div class="pd-hoa">
+    <span>HOA Fees</span>
+    <strong>Included</strong>
+  </div>
+</div>
+
+<div class="pd-card">
+  <h4>About This Home</h4>
+  <p>
+    Modern San Francisco rental with private pool and rooftop terrace.
+    Floor-to-ceiling glass doors, open-concept layout,
+    high-end kitchen appliances, and city skyline views.
+    Perfect for urban luxury living.
+  </p>
+</div>
+
+<div class="pd-card">
+  <h4>Features & Amenities</h4>
+  <div class="features-grid">
+    <div><i class="fa-solid fa-check"></i> Private Pool</div>
+    <div><i class="fa-solid fa-check"></i> Rooftop Terrace</div>
+    <div><i class="fa-solid fa-check"></i> Smart Home System</div>
+    <div><i class="fa-solid fa-check"></i> Floor-to-Ceiling Windows</div>
+    <div><i class="fa-solid fa-check"></i> Secure Parking</div>
+  </div>
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="pd-agent-card">
+  <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Agent Photo">
+  <h5>Michael Rivera</h5>
+  <p class="agent-role">Haven Bay Area</p>
+
+  <button class="agent-btn">
+    <i class="fa-solid fa-phone"></i> Call
+  </button>
+
+  <button class="agent-btn outline">
+    <i class="fa-solid fa-envelope"></i> Email
+  </button>
+
+  <hr>
+
+  <input type="text" id="name" placeholder="Your Name">
+  <input type="email" id="email" placeholder="Email Address">
+  <input type="text" id="phone" placeholder="Phone Number">
+
+  <button type="button" class="btn-green" onclick="submitRequest()">
+    Request a Tour
+  </button>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div id="galleryModal" class="gallery-modal">
+  <span class="close" onclick="closeGallery()">×</span>
+  <span class="arrow left" onclick="prevImage()">‹</span>
+  <img id="galleryImage" alt="Gallery Image">
+  <span class="arrow right" onclick="nextImage()">›</span>
+
+  <div class="dots">
+    <span onclick="setImage(0)"></span>
+    <span onclick="setImage(1)"></span>
+    <span onclick="setImage(2)"></span>
+    <span onclick="setImage(3)"></span>
+  </div>
+</div>
+
+<div class="request-modal" id="requestModal">
+  <div class="request-card">
+    <div class="check-icon">✔</div>
+    <h3>Request Sent!</h3>
+    <p>The agent will contact you shortly.</p>
+  </div>
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

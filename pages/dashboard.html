@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard | Haven</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    
+    <a class="navbar-brand d-flex align-items-center" href="../index.html">
+      <div class="logo-box">
+        <i class="fa-solid fa-house"></i>
+      </div>
+      <span class="brand-text ml-2">Haven</span>
+    </a>
+
+    <ul class="navbar-nav ml-auto align-items-center">
+      <li class="nav-item">
+        <a class="nav-link" href="listings.html">Buy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="listings.html">Rent</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="listings.html">Sell</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="agent.html">Agents</a>
+      </li>
+      <li class="nav-item ml-3">
+        <a href="dashboard.html" class="user-icon">
+          <i class="fa-regular fa-user"></i>
+        </a>
+      </li>
+      <li class="nav-item ml-3">
+        <a class="nav-link">Sign In</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-success ml-2 text-white">List Property</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+
+  <h1 class="dash-title">Your Dashboard</h1>
+  <p class="dash-sub">Manage your saved homes, searches, and messages</p>
+
+  <div class="dash-tabs">
+    <button class="tab-btn active" onclick="showTab('homes')">
+      <i class="fa-regular fa-heart"></i> Saved Homes <span>4</span>
+    </button>
+
+    <button class="tab-btn" onclick="showTab('search')">
+      <i class="fa-solid fa-magnifying-glass"></i> Saved Searches <span>3</span>
+    </button>
+
+    <button class="tab-btn" onclick="showTab('messages')">
+      <i class="fa-regular fa-comment"></i> Messages <span>2</span>
+    </button>
+  </div>
+
+  <div id="homes" class="tab-content active">
+
+    <!-- CARD 1 -->
+    <div class="saved-card">
+      <a href="property-details.html" style="display:flex; flex:1; text-decoration:none; color:inherit;">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+        <div class="saved-info">
+          <h4>$2,450,000 <span class="status active">ACTIVE</span></h4>
+          <p>1234 Park Avenue</p>
+          <span>New York, NY 10028</span>
+          <div class="meta">4 bd · 3.5 ba · 3,200 sqft</div>
+        </div>
+      </a>
+      <div class="saved-actions">
+        <a href="property-details.html" class="view-btn">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+        </a>
+        <a class="remove-btn">
+          <i class="fa-solid fa-trash"></i> Remove
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="saved-card">
+      <a href="property-details_2.html" style="display:flex; flex:1; text-decoration:none; color:inherit;">
+        <img src="https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12">
+        <div class="saved-info">
+          <h4>$1,875,000 <span class="status active">ACTIVE</span></h4>
+          <p>456 Wilshire Blvd</p>
+          <span>Los Angeles, CA 90024</span>
+          <div class="meta">3 bd · 2.5 ba · 2,400 sqft</div>
+        </div>
+      </a>
+      <div class="saved-actions">
+        <a href="property-details_2.html" class="view-btn">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+        </a>
+        <a class="remove-btn">
+          <i class="fa-solid fa-trash"></i> Remove
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="saved-card">
+      <a href="property-details_3.html" style="display:flex; flex:1; text-decoration:none; color:inherit;">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80">
+        <div class="saved-info">
+          <h4>$3,200,000 <span class="status active">ACTIVE</span></h4>
+          <p>789 Ocean Drive</p>
+          <span>Miami, FL 33139</span>
+          <div class="meta">5 bd · 4 ba · 4,100 sqft</div>
+        </div>
+      </a>
+      <div class="saved-actions">
+        <a href="property-details_3.html" class="view-btn">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+        </a>
+        <a class="remove-btn">
+          <i class="fa-solid fa-trash"></i> Remove
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="saved-card">
+      <a href="property-details_4.html" style="display:flex; flex:1; text-decoration:none; color:inherit;">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80">
+        <div class="saved-info">
+          <h4>$975,000 <span class="status active">ACTIVE</span></h4>
+          <p>567 Lincoln Park</p>
+          <span>Chicago, IL 60614</span>
+          <div class="meta">3 bd · 2 ba · 1,800 sqft</div>
+        </div>
+      </a>
+      <div class="saved-actions">
+        <a href="property-details_4.html" class="view-btn">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+        </a>
+        <a class="remove-btn">
+          <i class="fa-solid fa-trash"></i> Remove
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="search" class="tab-content">
+
+    <div class="search-card">
+      <div class="search-left">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div>
+          <h5>3+ bed homes in Manhattan under $3M</h5>
+          <p>24 properties · Updated 2 hours ago</p>
+        </div>
+      </div>
+      <div class="search-actions">
+        <button class="alert-btn">
+          <i class="fa-regular fa-bell"></i> Alerts On
+        </button>
+        <i class="fa-solid fa-trash delete-icon"></i>
+      </div>
+    </div>
+
+    <div class="search-card">
+      <div class="search-left">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div>
+          <h5>Condos in Los Angeles with pool</h5>
+          <p>18 properties · Updated 5 hours ago</p>
+        </div>
+      </div>
+      <div class="search-actions">
+        <button class="alert-btn">
+          <i class="fa-regular fa-bell"></i> Alerts On
+        </button>
+        <i class="fa-solid fa-trash delete-icon"></i>
+      </div>
+    </div>
+
+    <div class="search-card">
+      <div class="search-left">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div>
+          <h5>Waterfront properties in Miami</h5>
+          <p>12 properties • Updated 1 day ago</p>
+        </div>
+      </div>
+      <div class="search-actions">
+        <button class="alert-btn">
+          <i class="fa-regular fa-bell"></i> Alerts On
+        </button>
+        <i class="fa-solid fa-trash delete-icon"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="messages" class="tab-content">
+
+    <div class="message-card active-msg">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg">
+      <div class="message-info">
+        <h5>Sarah Mitchell</h5>
+        <p>Thanks for your interest in 1234 Park Avenue...</p>
+      </div>
+      <span class="time">2 hours ago</span>
+      <span class="notification-dot"></span>
+    </div>
+
+    <div class="message-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
+      <div class="message-info">
+        <h5>Daniel Brooks</h5>
+        <p>The property at 456 Wilshire Blvd is still available...</p>
+      </div>
+      <span class="time">1 day ago</span>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+</html>
