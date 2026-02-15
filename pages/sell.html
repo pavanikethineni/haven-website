@@ -16,28 +16,56 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
+
     <a class="navbar-brand d-flex align-items-center" href="../index.html">
-      <img src="../images/haven-logo.png" height="40" alt="Haven">
-      <span class="ml-2 brand-text">Haven</span>
+      <div class="logo-box">
+        <i class="fa-solid fa-house"></i>
+      </div>
+      <span class="brand-text ml-2">Haven</span>
     </a>
 
-    <ul class="navbar-nav ml-auto align-items-center">
-      <li class="nav-item"><a class="nav-link" href="listings.html">Buy</a></li>
-      <li class="nav-item"><a class="nav-link" href="rent.html">Rent</a></li>
-      <li class="nav-item"><a class="nav-link" href="sell.html">Sell</a></li>
-      <li class="nav-item"><a class="nav-link" href="agent.html">Agents</a></li>
-      <li class="nav-item ml-3">
-        <a href="dashboard.html" class="user-icon">
-          <i class="fa-regular fa-user"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="btn btn-outline-secondary ml-3">Sign In</a>
-      </li>
-      <li class="nav-item">
-        <a class="btn btn-success ml-2 text-white">List Property</a>
-      </li>
-    </ul>
+    <!-- TOGGLER BUTTON -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSE CONTENT -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="listings.html">Buy</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="rent.html">Rent</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="sell.html">Sell</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="agent.html">Agents</a>
+        </li>
+
+        <li class="nav-item ml-lg-3">
+          <a href="dashboard.html" class="user-icon">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </li>
+
+        <li class="nav-item ml-lg-3">
+          <a class="nav-link">Sign In</a>
+        </li>
+
+        <li class="nav-item ml-lg-2">
+          <a class="btn btn-success text-white">List Property</a>
+        </li>
+
+      </ul>
+    </div>
+
   </div>
 </nav>
 

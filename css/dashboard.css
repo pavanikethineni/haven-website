@@ -257,3 +257,39 @@ body {
   }
 
 }
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+/* ===== MOBILE CONTAINER FIX ===== */
+@media (max-width: 768px) {
+
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .saved-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .saved-actions {
+    margin-left: 0 !important;
+  }
+
+}
+.card-link {
+  display: flex;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+
+  .card-link {
+    flex-direction: column;
+  }
+
+}

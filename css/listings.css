@@ -318,3 +318,21 @@ body {
   }
 
 }
+html, body {
+  overflow-x: hidden;
+}
+
+.container-fluid,
+.container {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-wrap: wrap;
+  }
+
+  .filter-bar button {
+    flex: 1 1 45%;
+  }
+}
