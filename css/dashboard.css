@@ -200,3 +200,60 @@ body {
   border-radius:50%;
   padding:auto;
 }
+@media (max-width: 768px) {
+
+  .saved-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .saved-card img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .saved-actions {
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .dash-tabs {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 8px 15px !important;
+  }
+
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 6px 0 !important;
+    font-size: 15px;
+  }
+
+  .navbar-nav .btn {
+    width: auto !important;
+    padding: 6px 14px !important;
+    font-size: 14px;
+  }
+
+  .user-icon {
+    padding: 8px !important;
+  }
+
+}
